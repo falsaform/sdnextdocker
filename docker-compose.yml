@@ -1,0 +1,5 @@
+services:
+  sdnext:
+    build:
+      context: .
+      dockerfile: Dockerfile
