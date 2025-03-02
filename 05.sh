@@ -42,6 +42,11 @@ if [ ! -d ${SD05_DIR}/ComfyUI/models/vae/Wan2_1_VAE_bf16.safetensors ]; then
     wget https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors
 fi
 
+if [ ! -d ${SD05_DIR}/ComfyUI/models/text_encoders/models_t5_umt5-xxl-enc-bf16.pth ]; then
+    cd ${SD05_DIR}/ComfyUI/models/text_encoders
+    wget https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B/resolve/main/models_t5_umt5-xxl-enc-bf16.pth
+fi
+
 
 
 cd ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager
