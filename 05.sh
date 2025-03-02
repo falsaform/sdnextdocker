@@ -27,6 +27,22 @@ if [ ! -d ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper ]; then
     pip install -r requirements.txt
 fi
 
+if [ ! -d ${SD05_DIR}/ComfyUI/models/text_encoders/open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors ]; then
+    cd ${SD05_DIR}/ComfyUI/models/text_encoders
+    wget https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/open-clip-xlm-roberta-large-vit-huge-14_fp16.safetensors
+fi
+
+if [ ! -d ${SD05_DIR}/ComfyUI/models/diffusion_models/Wan2_1-T2V-1_3B_bf16.safetensors ]; then
+    cd ${SD05_DIR}/ComfyUI/models/diffusion_models
+    wget https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-T2V-1_3B_bf16.safetensors
+fi
+
+if [ ! -d ${SD05_DIR}/ComfyUI/models/vae/Wan2_1_VAE_bf16.safetensors ]; then
+    cd ${SD05_DIR}/ComfyUI/models/vae
+    wget https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1_VAE_bf16.safetensors
+fi
+
+
 
 cd ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager
 #git reset --hard HEAD
