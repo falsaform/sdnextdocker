@@ -22,6 +22,12 @@ if [ ! -d ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager ]; then
     git clone https://github.com/ltdrdata/ComfyUI-Manager.git ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager
 fi
 
+if [ ! -d ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper ]; then
+    git clone https://github.com/kijai/ComfyUI-WanVideoWrapper.git ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper
+    pip install -r requirements.txt
+fi
+
+
 cd ${SD05_DIR}/ComfyUI/custom_nodes/ComfyUI-Manager
 #git reset --hard HEAD
 git pull -X ours
